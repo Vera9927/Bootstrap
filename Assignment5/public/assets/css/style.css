@@ -17,6 +17,16 @@
   top: 184px;
 }
 
+.icons{
+  margin: 10px;
+
+}
+
+#todaystrend{
+  width: 1122px;
+  height: 546px;
+}
+
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
