@@ -5,13 +5,14 @@
 
   #sidebar {
     width: 255px;
-    height: 100%;
+    height: 100vh;
     background-color: #ffffff;
     position: fixed !important;
     font-family: "Mulish", sans-serif;
     display: flex !important;
   }
-  #sidebarToggle{
+
+  #sidebarToggle {
     display: none;
     width: 100px !important;
     height: 100px !important;
@@ -20,7 +21,10 @@
     left: 20px;
   }
 
-  
+  #graphContainer {
+    margin-left: 255px;
+  }
+
 }
 
 
@@ -35,15 +39,16 @@
 /* sidebar */
 #sidebar {
   width: 255px;
-  height:x 100vh;
+  height: 100vh;
   background-color: #ffffff;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
   position: fixed;
+  z-index: 999;
 }
 
-#dashboardTitle{
-  width:255px;
+#dashboardTitle {
+  width: 255px;
   display: flex;
   justify-content: flex-start;
   gap: 20px;
@@ -53,14 +58,13 @@
 #graphContainer {
 
   font-family: "Mulish", sans-serif;
-  width: calc(100% - 255px);
+  /* width: calc(100% - 255px); */
   height: auto;
   overflow-y: auto;
-  margin-left: 255px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  margin-left: 20%;
   gap: 30px;
 
 }
@@ -228,12 +232,13 @@ h6 {
 }
 
 
-#sidebarToggle{
+#sidebarToggle {
   display: block;
   position: absolute;
   top: 20px;
   left: 20px;
 }
-.sidebar-toggled{
+
+.sidebar-toggled {
   display: flex !important;
 }
