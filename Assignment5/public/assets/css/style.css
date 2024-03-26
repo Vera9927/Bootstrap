@@ -1,41 +1,59 @@
-/* dashboard */
-#dash{
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  #sidebar {
     width: 255px;
     height: 100vh;
     background-color: #ffffff;
     font-family: "Mulish", sans-serif;
-    font-size: 16px;
-
   }
-  
-
-/* Graphs */
-#graphContainer{
-  font-family: "Mulish", sans-serif;
 }
 
-#overview{
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30.12px;
-  letter-spacing: 0.3px;
-  font-family: "Mulish", sans-serif;
-  color: black;
+
+
+#container {
+  width: 100vw;
+  height: 100vh;
 }
 
-.hstack {
+
+
+/* sidebar */
+#sidebar {
+  width: 255px;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  position: fixed;
+}
+
+#dashboardTitle{
+  width:255px;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-.flex-grow {
-  flex-grow: 1;
+/* content */
+#graphContainer {
+
+  font-family: "Mulish", sans-serif;
+  width: calc(100% - 255px);
+  height: auto;
+  overflow-y: auto;
+  margin-left: 255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 30px;
+
 }
 
-#name{
-  color: black;
-}
-.nav-link{
+.nav-link {
   color: gray;
   font-size: 16px;
   font-weight: 400;
@@ -45,25 +63,154 @@
   top: 184px;
 }
 
-.icons{
+.icons {
   margin: 10px;
 
 }
 
+/* tool bar */
+#overview {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.12px;
+  letter-spacing: 0.3px;
+  font-family: "Mulish", sans-serif;
+  color: black;
+  margin-left: 30px;
 
-#todaystrend{
-  width: 1122px;
-  height: 546px;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-    #dash{
-      width: 255px;
-      height: 100vh;
-      background-color: #ffffff;
-      font-family: "Mulish", sans-serif;
-    }
-  }
+#name {
+  color: black;
+}
+
+#vrcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.vr {
+  height: 32px;
+}
+
+
+
+/* overview cards */
+#overviewcards {
+  margin: 0 30px 0 30px;
+}
+
+.card-title {
+
+  font-family: Mulish;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23.85px;
+  letter-spacing: 0.4000000059604645px;
+  text-align: center;
+  color: #9FA2B4;
+}
+
+.card-number {
+
+  font-family: Mulish;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50.2px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #252733;
+
+
+}
+
+/* Today's trends */
+#todaystrend {
+  width: 94%;
+  height: auto;
+  margin: 0 30px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* unsolved ticket and tasks  */
+
+
+#bottomcards {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+#leftcard {
+  height: 320px;
+}
+
+#rightcard {
+  height: 320px;
+}
+
+.rightsideText {
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: right;
+  color: #9FA2B4;
+
+}
+
+h5 {
+  font-family: Mulish;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23.85px;
+  letter-spacing: 0.4000000059604645px;
+  text-align: left;
+  color: #252733;
+  ;
+
+}
+
+h6 {
+
+  font-family: Mulish;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: #9FA2B4;
+  ;
+
+}
+
+.card-link {
+
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: right;
+  color: #3751FF;
+
+}
+
+.list-group {
+  height: 232px;
+  overflow-y: auto;
+  margin-left: 0;
+}
+
+.list-group-item {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -19,13 +19,13 @@
 </head>
 
 <body>
-    <div class="container-fluid d-flex p-0">
+    <div class="container-fluid d-flex p-0" id="container">
+
         <!-- side bar -->
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 255px; height: -100vh; " id="dash">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <svg class="bi pe-none me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap" />
-                </svg>
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 255px; height: -100vh; "
+            id="sidebar">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" id="dashboardTitle">
+                <img src="assets/img/logo.png" alt="logo of dashboard">
                 <span class="fs-4" id="titleDashboard">Dashboard Kit</span>
             </a>
             <hr>
@@ -111,84 +111,188 @@
         </div>
 
 
-        <!-- overview -->
+        <!-- content-->
         <div id="graphContainer">
-            
+
             <!-- tool bar -->
             <div class="hstack gap-3">
-                <div class="p-2" id="overview">Overview</div>
-                <div class="flex-grow"></div> 
-                <div><img src="assets/icon/search.svg" alt="search icon"></div>
-                <div><img src="assets/icon/new.svg" alt="notification icon"></div>
+                <!-- overview row -->
+                <div class="p-2 " id="overview">Overview</div>
+
+                <!-- search and notification -->
+                <ul class="p-2 ms-auto list-unstyled d-flex">
+                    <li class="d-flex align-items-center me-3">
+                        <img src="assets/icon/search.svg" alt="search icon">
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <img src="assets/icon/new.svg" alt="notification icon">
+                    </li>
+                </ul>
+
+                <div id="vrcontainer">
+                    <div class="vr"></div>
+                </div>
+
                 <div class="p-2" id="name">Jones Ferdinand</div>
+                <div class="p-2"><img src="assets/img/photo.png" alt="personal photo"></div>
             </div>
 
 
-
-            <!-- <div class="hstack gap-3">
-                <div class="p-2" id="overview">Overview</div>
-                <div class="p-2 ms-auto"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
-                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-bell icons" viewBox="0 0 16 16">
-                        <path
-                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-                    </svg>
-                </div>
-                <div class="vr"></div>
-                <div class="p-2" id="name">Jones Ferdinand</div>
-            </div> -->
-
-            <!-- Statistics cards -->
-            <div class="row">
-                <div class="card text-center mb-3 mx-3 icons" style="width: 18rem;">
+            <!-- overview cards -->
+            <div class="row" id="overviewcards">
+                <div class="card text-center mb-3 mx-3 " style="width: 15rem;">
                     <div class="card-body">
                         <h5 class="card-title">Unresolved</h5>
-                        <p class="card-text">60</p>
+                        <p class="card-number">60</p>
                     </div>
                 </div>
-                <div class="card text-center mb-3 mx-3" style="width: 18rem;">
+                <div class="card text-center mb-3 mx-3" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Unresolved</h5>
-                        <p class="card-text">60</p>
+                        <h5 class="card-title">Overdue</h5>
+                        <p class="card-number">60</p>
                     </div>
                 </div>
-                <div class="card text-center mb-3 mx-3" style="width: 18rem;">
+                <div class="card text-center mb-3 mx-3" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Unresolved</h5>
-                        <p class="card-text">60</p>
+                        <h5 class="card-title">Open</h5>
+                        <p class="card-number">60</p>
                     </div>
                 </div>
-                <div class="card text-center mb-3 mx-3" style="width: 18rem;">
+                <div class="card text-center mb-3 mx-3" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Unresolved</h5>
-                        <p class="card-text">60</p>
+                        <h5 class="card-title">On hold</h5>
+                        <p class="card-number">60</p>
                     </div>
                 </div>
             </div>
 
             <!-- Today's trends -->
-            <img src="/assets/img/trends.png" alt="imagine of today's trends">
+            <div class="text-center" id="todaystrend">
+                <img src="/assets/img/trends.png" class="img-fluid" alt="imagine of today's trends">
+            </div>
+
 
             <!-- unsolved ticket and tasks -->
-            <div class="row">
-                <div class="card mx-3 my-3" style="width: 36rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Unresolved tickets</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Group: support</h6>
-                        <a href="#" class="card-link">View details</a>
+
+            <div class="row" id="bottomcards">
+
+                <!-- bottom left card" -->
+                <div class="col-md-6 mb-3" >
+                    <div class="card p-3" id="leftcard">
+                        <!-- title -->
+                        <div class="card-body d-flex flex-column ">
+                            <div class="c-details d-flex d-flex justify-content-between align-items-end">
+                                <h5 class="mb-0">Unresolved ticket</h5>
+                                <p class="card-link">View details</p>
+                            </div>
+                            <h6>Group: support</h6>
+
+                        </div>
+
+                        <!-- bottom left table -->
+                        <div class="bottomLeftTable  mb-3">
+                            <table class="table mb-3 ">
+                                <tbody>
+                                    <tr>
+                                        <td class="pl-0">Waiting on Feature Request</td>
+                                        <td class="pr-0 text-right">
+                                            <div class="rightsideText">4238</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">Awaiting Customer Response</td>
+                                        <td class="pr-0 text-right">
+                                            <div class="rightsideText">1005</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">Awaiting Developer Fix</td>
+                                        <td class="pr-0 text-right">
+                                            <div class="rightsideText">914</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pl-0">Pending</td>
+                                        <td class="pr-0 text-right">
+                                            <div class="rightsideText">281</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
                     </div>
+
                 </div>
-                <div class="card mx-3 my-3" style="width: 36rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Tasks</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Today</h6>
-                        <a href="#" class="card-link">View all</a>
+
+
+                <!-- bottom right card" -->
+                <div class="col-md-6 mb-3">
+                    <div class="card  mx-3" id="rightcard">
+
+                        <!-- title -->
+                        <div class="card-body d-flex flex-column ">
+                            <div class="c-details d-flex d-flex justify-content-between align-items-end">
+                                <h5 class="mb-0">Tasks</h5>
+                                <p class="card-link">View all</p>
+                            </div>
+                            <h6>Today</h6>
+
+                        </div>
+
+
+                        <!-- list -->
+                        <ul class="list-group">
+
+
+                            <!-- create new task -->
+                            <li class="list-group-item">
+
+                                <p>Create new task</p>
+                                <img src="assets/img/inactive.png" alt="create button">
+
+                            </li>
+
+                            <!-- radios list -->
+                            <li class="list-group-item">
+                                <div>
+                                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                        id="firstRadio" checked>
+                                    <label class="form-check-label" for="firstRadio">Finish ticket update</label>
+                                </div>
+
+                                <span class="badge text-bg-warning">URGENT</span>
+                            </li>
+                            <li class="list-group-item">
+
+                                <div>
+                                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                        id="secondRadio">
+                                    <label class="form-check-label" for="secondRadio">Create new ticket example</label>
+
+                                </div>
+
+                                <span class="badge text-bg-success">NEW</span>
+                            </li>
+                            <li class="list-group-item">
+                                <div>
+                                    <input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
+                                        id="thirdRadio">
+                                    <label class="form-check-label" for="thirdRadio">Update ticket report</label>
+
+                                </div>
+
+                                <span class="badge text-bg-light">DEFAULT</span>
+                            </li>
+                        </ul>
+
+
                     </div>
+
                 </div>
+
+
+
             </div>
         </div>
 
