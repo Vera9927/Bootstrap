@@ -5,10 +5,22 @@
 
   #sidebar {
     width: 255px;
-    height: 100vh;
+    height: 100%;
     background-color: #ffffff;
+    position: fixed !important;
     font-family: "Mulish", sans-serif;
+    display: flex !important;
   }
+  #sidebarToggle{
+    display: none;
+    width: 100px !important;
+    height: 100px !important;
+    position: absolute !important;
+    top: 20px;
+    left: 20px;
+  }
+
+  
 }
 
 
@@ -23,7 +35,7 @@
 /* sidebar */
 #sidebar {
   width: 255px;
-  height: 100vh;
+  height:x 100vh;
   background-color: #ffffff;
   font-family: "Mulish", sans-serif;
   font-size: 16px;
@@ -213,4 +225,15 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+#sidebarToggle{
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.sidebar-toggled{
+  display: flex !important;
 }
