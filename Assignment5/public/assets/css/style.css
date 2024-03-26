@@ -22,6 +22,16 @@
   font-family: "Mulish", sans-serif;
   color: black;
 }
+
+.hstack {
+  display: flex;
+  align-items: center;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
 #name{
   color: black;
 }
