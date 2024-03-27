@@ -1,35 +1,3 @@
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-
-  #sidebar {
-    width: 255px;
-    height: 100vh;
-    background-color: #ffffff;
-    position: fixed !important;
-    font-family: "Mulish", sans-serif;
-    display: flex !important;
-  }
-
-  #sidebarToggle {
-    display: none;
-    width: 100px !important;
-    height: 100px !important;
-    position: absolute !important;
-    top: 20px;
-    left: 20px;
-  }
-
-  #graphContainer {
-    padding-left: 255px;
-  }
-
-
-}
-
-
-
 #container {
   width: 100vw;
   height: 100vh;
@@ -86,6 +54,12 @@
 }
 
 /* tool bar */
+
+#toolbar{
+  visibility: hidden;
+}
+
+
 #overview {
   font-size: 24px;
   font-weight: 700;
@@ -119,6 +93,14 @@
   margin: 0 30px 0 30px;
 }
 
+.card:hover{
+  border: 1px solid #3751FF;
+}
+
+.card:hover .card-title,
+.card:hover .card-number {
+    color: #3751FF;; /* 文字颜色 */
+}
 .card-title {
 
   font-family: Mulish;
@@ -129,6 +111,8 @@
   text-align: center;
   color: #9FA2B4;
 }
+
+
 
 .card-number {
 
@@ -242,3 +226,35 @@ h6 {
 .sidebar-toggled{
   display: flex !important;
 } 
+
+
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+
+  #sidebar {
+    width: 255px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed !important;
+    font-family: "Mulish", sans-serif;
+    display: flex !important;
+  }
+
+  #sidebarToggle {
+    display: none;
+    width: 100px !important;
+    height: 100px !important;
+    position: absolute !important;
+    top: 20px;
+    left: 20px;
+  }
+
+  #graphContainer {
+    padding-left: 255px;
+  }
+
+
+}
