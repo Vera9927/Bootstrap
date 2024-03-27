@@ -256,5 +256,8 @@ h6 {
     padding-left: 255px;
   }
 
+  #toolbar{
+    visibility: visible;
+  }
 
 }
