@@ -1,0 +1,69 @@
+{
+    "overview": "Overview",
+    "name": "Jones Ferdinand",
+    "leftcard-title": "Unresolved ticket",
+    "view-details": "View details",
+    "support": "Group:Support",
+
+    "graphContainer": {
+        "overviewcards": [
+            {
+                "class": "card text-center mb-3 mx-3 ",
+                "style": "width: 15rem;",
+                "card-body": {
+                    "card-title": "Unresolved",
+                    "card-number": 60
+                }
+            },
+            {
+                "class": "card text-center mb-3 mx-3",
+                "style": "width: 15rem;",
+                "card-body": {
+                    "card-title": "Overdue",
+                    "card-number": 60
+                }
+            },
+            {
+                "class": "card text-center mb-3 mx-3",
+                "style": "width: 15rem;",
+                "card-body": {
+                    "card-title": "Open",
+                    "card-number": 60
+                }
+            },
+            {
+                "class": "card text-center mb-3 mx-3",
+                "style": "width: 15rem;",
+                "card-body": {
+                    "card-title": "On hold",
+                    "card-number": 60
+                }
+            }
+        ]
+    },
+    
+    "bottom_left_card": {
+        "title": "Unresolved ticket",
+        "group": "support",
+        "table_data": [
+            {
+                "status": "Waiting on Feature Request",
+                "count": 4238
+            },
+            {
+                "status": "Awaiting Customer Response",
+                "count": 1005
+            },
+            {
+                "status": "Awaiting Developer Fix",
+                "count": 914
+            },
+            {
+                "status": "Pending",
+                "count": 281
+            }
+        ]
+    }
+
+   
+}

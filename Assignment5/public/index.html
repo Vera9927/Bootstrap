@@ -38,7 +38,7 @@
             id="sidebar">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
                 id="dashboardTitle">
-                <img src="assets/img/logo.png" alt="logo of dashboard">
+                <img src="assets/img/logo.png" alt="logo of dashboard" style="width: 30px; height: 30px;">
                 <span class="fs-4" id="titleDashboard">Dashboard Kit</span>
             </a>
             <hr>
@@ -129,7 +129,7 @@
             <!-- tool bar -->
             <div class="hstack gap-3" id="toolbar">
                 <!-- overview row -->
-                <div class="p-2 " id="overview">Overview</div>
+                <div class="p-2 " id="overview"></div>
 
                 <!-- search and notification -->
                 <ul class="p-2 ms-auto list-unstyled d-flex">
@@ -145,37 +145,38 @@
                     <div class="vr"></div>
                 </div>
 
-                <div class="p-2" id="name">Jones Ferdinand</div>
+                <div class="p-2" id="name"></div>
+                <!-- Jones Ferdinand -->
                 <div class="p-2"><img src="assets/img/photo.png" alt="personal photo"></div>
             </div>
 
 
             <!-- overview cards -->
             <div class="row" id="overviewcards">
-                <div class="card text-center mb-3 mx-3 " style="width: 15rem;">
+                <!-- <div class="card text-center mb-3 mx-3 " style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Unresolved</h5>
-                        <p class="card-number">60</p>
+                        <h5 class="card-title" id="overview-unsolved">Unresolved</h5>
+                         <p class="card-number" id="unsolved-number">60</p>
                     </div>
                 </div>
                 <div class="card text-center mb-3 mx-3" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Overdue</h5>
-                        <p class="card-number">60</p>
+                        <h5 class="card-title" id="overview-overdue">Overdue</h5>
+                        <p class="card-number" id="overdue-number">60</p>
                     </div>
                 </div>
                 <div class="card text-center mb-3 mx-3" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">Open</h5>
-                        <p class="card-number">60</p>
+                        <h5 class="card-title" id="overview-open">Open</h5>
+                        <p class="card-number" id="open-number">60</p>
                     </div>
                 </div>
                 <div class="card text-center mb-3 mx-3" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">On hold</h5>
-                        <p class="card-number">60</p>
+                        <h5 class="card-title" id="overview-onhold">On hold</h5>
+                        <p class="card-number" id="onhold-number">60</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Today's trends -->
@@ -194,16 +195,17 @@
                         <!-- title -->
                         <div class="card-body d-flex flex-column ">
                             <div class="c-details d-flex d-flex justify-content-between align-items-end">
-                                <h5 class="mb-0">Unresolved ticket</h5>
-                                <p class="card-link">View details</p>
+                                <h5 class="mb-0" id="leftcard-title"></h5>
+                                <p class="card-link" id="view-details"></p>
                             </div>
-                            <h6>Group: support</h6>
+                            <h6 id="support"></h6>
 
                         </div>
 
                         <!-- bottom left table -->
-                        <div class="bottomLeftTable  mb-3">
-                            <table class="table mb-3 ">
+                        <div class="bottomLeftTable  mb-3" id="bottomlefttable">
+                            <!-- the original html -->
+                            <!-- <table class="table mb-3 ">
                                 <tbody>
                                     <tr>
                                         <td class="pl-0">Waiting on Feature Request</td>
@@ -230,7 +232,7 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         </div>
 
                     </div>
@@ -314,6 +316,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./assets/node.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 
